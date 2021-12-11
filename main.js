@@ -1,3 +1,5 @@
+const mainArena = document.querySelector('.arenas');
+
 const player1 = {
   name: 'FirstPlayer',
   hp: 50,
@@ -26,8 +28,7 @@ function createPlayer(player, obj) {
     lifeDiv = document.createElement('div'),
     nameDiv = document.createElement('div'),
     characterDiv = document.createElement('div'),
-    img = document.createElement('img'),
-    mainArena = document.querySelector('.arenas');
+    img = document.createElement('img');
 
   //Добавление классов
   containerDiv.classList.add(player);
@@ -38,7 +39,7 @@ function createPlayer(player, obj) {
   img.src = imgPlayer;
 
   //Стили
-  lifeDiv.style.width = hp;
+  lifeDiv.style.width = hp + '%';
   nameDiv.innerText = name;
 
   //Вложение div
